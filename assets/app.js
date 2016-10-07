@@ -1,11 +1,24 @@
+
 setTimeout(function () {
   $('.board').fadeIn(500);
 }, 200);
 
-setTimeout(function () {
-  $('.board_target').css('background','url("layers/07-10-2016_15h45-16h00_heure3.png"')
-}, 1000);
+var files = [];
 
-setTimeout(function () {
-  $('.board_target').css('background','url("layers/07-10-2016_14h45-15h00_heure2.png"')
-}, 2000);
+function change(){
+  $.ajax({
+    url: "layers/",
+    success: function(data){
+
+       $(data).find("a").each(function(){
+          files.push($(this).attr("href"));
+       });
+       console.log(files);
+       var d = new Date();
+       var n = d.getTime();
+       $('.board_target').css('background','url("layers/'+files[1]+'"')
+    }
+  });
+}
+
+change();

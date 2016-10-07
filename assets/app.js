@@ -16,8 +16,14 @@ function change(){
       time_1 = time[0];
       time_2 = time[1];
       if (time_1 <= ""+h+":"+""+m+"")
-          if (time_2 >= ""+h+":"+""+m+"")
+          if (time_2 >= ""+h+":"+""+m+""){
             $('.board_target').css('background','url("layers/'+data.layers[i][0]+'.png"')
+            break;
+          }
+          else
+            $('.board_target').css('background','')
+      else
+        $('.board_target').css('background','')
       i++;
     }
     setTimeout(function () {

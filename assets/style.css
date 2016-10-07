@@ -5,3 +5,9 @@
   display: none;
   margin: 50px auto;
 }
+
+.board_target{
+  background: url('07-10-2016_15h45_16h00_heure3.png');
+  width: 600px;
+  height: 638px;
+}

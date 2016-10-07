@@ -16,7 +16,11 @@ function change(){
        console.log(files);
        var d = new Date();
        var n = d.getTime();
-       $('.board_target').css('background','url("layers/'+files[1]+'"')
+       $('.board_target').css('background','url("layers/'+files[0]+'"')
+       setTimeout(function () {
+         files = [];
+         change()
+       }, 1000);
     }
   });
 }

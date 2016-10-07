@@ -1,3 +1,3 @@
 setTimeout(function () {
-  $('.board').fadeOut(500);
-}, 2000);
+  $('.board').fadeIn(500);
+}, 200);

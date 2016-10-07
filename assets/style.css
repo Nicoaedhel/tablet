@@ -1,5 +1,7 @@
 .board{
-  background: blue;
-  width: 200px;
-  height: 200px;
+  width: 600px;
+  height: 638px;
+  background: url('carte_base.png');
+  display: none;
+  margin: 50px auto;
 }

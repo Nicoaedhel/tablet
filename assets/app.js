@@ -34,18 +34,27 @@ function change(){
           if (time_1 <= ""+h+":"+""+m+"")
               if (time_2 >= ""+h+":"+""+m+""){
                 $('#'+i).remove();
+                $('.info>#'+i).remove();
                 $( ".board" ).append("<div class='board_target' id='"+i+"'></div>");
                 $('#'+i).css('background','url("layers/'+data.layers[i][0]+'.png"');
-
+                $( ".info" ).append("<p id='"+i+"'>"+data.layers[i][3]+" "+time[0]+"-"+time[1]+" ______ "+date_time[0]+"-"+date_time[1]+" (ACTIVE)</p>");
               }
-              else
+              else{
                 $('#'+i).remove();
-          else
+                $('.info>#'+i).remove();
+              }
+          else{
             $('#'+i).remove();
-        else
+            $('.info>#'+i).remove();
+          }
+        else{
           $('#'+i).remove();
-      else
+          $('.info>#'+i).remove();
+        }
+      else{
         $('#'+i).remove();
+        $('.info>#'+i).remove();
+      }
       i++;
     }
     setTimeout(function () {

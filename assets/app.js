@@ -3,6 +3,10 @@ setTimeout(function () {
   $('.board').fadeIn(500);
 }, 200);
 
+setTimeout(function () {
+  $('.info').fadeIn(500);
+}, 400);
+
 var files = [];
 
 function change(){

@@ -17,11 +17,30 @@ body{
 }
 
 .info{
-  text-align: center;
-  display: none;
+  margin: 0 auto;
+  display: table;
+  opacity: 0;
+  transition: all 0.2s;
+  width: 600px;
 }
 
 .info>p{
     margin: 2px;
-    color: #fa5252;
+}
+
+.left{
+  float: left;
+}
+
+.right{
+  float: right;
+}
+
+.active{
+  color: #fa5252;
+  display: table-header-group;
+}
+
+.unactive{
+  display: table-footer-group;
 }

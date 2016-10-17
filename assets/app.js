@@ -4,7 +4,7 @@ setTimeout(function () {
 }, 200);
 
 setTimeout(function () {
-  $('.info').fadeIn(500);
+  $('.info').css('opacity' , "1");
 }, 400);
 
 var files = [];
@@ -41,7 +41,7 @@ function change(){
                 $('.info>#'+i).remove();
                 $( ".board" ).append("<div class='board_target' id='"+i+"'></div>");
                 $('#'+i).css('background','url("layers/'+data.layers[i][0]+'.png"');
-                $( ".info" ).append("<p id='"+i+"'>"+data.layers[i][3]+" "+time[0]+"-"+time[1]+" ______ "+date_time[0]+"-"+date_time[1]+" (ACTIVE)</p>");
+                $( ".info" ).append("<div id='"+i+"' class='active'><div class='left'>"+data.layers[i][3]+"</div> <div class='right'>"+time[0]+"-"+time[1]+" ______ "+date_time[0]+"-"+date_time[1]+" (ACTIVE)</div></div>");
               }
               else{
                 $('#'+i).remove();
@@ -50,6 +50,7 @@ function change(){
           else{
             $('#'+i).remove();
             $('.info>#'+i).remove();
+            $( ".info" ).append("<div id='"+i+"' class='unactive'><div class='left'>"+data.layers[i][3]+"</div> <div class='right'>"+time[0]+"-"+time[1]+" ___ "+date_time[0]+"-"+date_time[1]+" (UNACTIVE)</div></div>");
           }
         else{
           $('#'+i).remove();

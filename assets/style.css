@@ -21,7 +21,7 @@ body{
   display: table;
   opacity: 0;
   transition: all 0.2s;
-  width: 600px;
+  min-width: 600px;
 }
 
 .info>p{
@@ -30,6 +30,7 @@ body{
 
 .left{
   float: left;
+  margin-right: 25px;
 }
 
 .right{

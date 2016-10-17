@@ -59,6 +59,8 @@ function change(){
       else{
         $('#'+i).remove();
         $('.info>#'+i).remove();
+        $( ".info" ).append("<div id='"+i+"' class='unactive'><div class='left'>"+data.layers[i][3]+"</div> <div class='right'>"+time[0]+"-"+time[1]+" ___ "+date_time[0]+"-"+date_time[1]+" (UNACTIVE)</div></div>");
+        
       }
       i++;
     }

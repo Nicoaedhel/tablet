@@ -9,4 +9,5 @@
 .board_target{
   width: 600px;
   height: 638px;
+  position: absolute;
 }

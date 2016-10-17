@@ -33,17 +33,19 @@ function change(){
         if(date_time_2 >= today_time)
           if (time_1 <= ""+h+":"+""+m+"")
               if (time_2 >= ""+h+":"+""+m+""){
-                $('.board_target').css('background','url("layers/'+data.layers[i][0]+'.png"')
-                break;
+                $('#'+i).remove();
+                $( ".board" ).append("<div class='board_target' id='"+i+"'></div>");
+                $('#'+i).css('background','url("layers/'+data.layers[i][0]+'.png"');
+
               }
               else
-                $('.board_target').css('background','')
+                $('#'+i).remove();
           else
-            $('.board_target').css('background','')
+            $('#'+i).remove();
         else
-          $('.board_target').css('background','')
+          $('#'+i).remove();
       else
-        $('.board_target').css('background','')
+        $('#'+i).remove();
       i++;
     }
     setTimeout(function () {
